@@ -54,10 +54,10 @@ export const EvidenceAssistant: React.FC<EvidenceAssistantProps> = ({
         </div>
 
         {/* Tab switcher */}
-        <div className="grid grid-cols-3 gap-1 mt-3 bg-gray-950 p-1 rounded-lg border border-gray-800 text-xs">
+        <div className="flex bg-gray-950 p-1 rounded-lg border border-gray-800 text-xs gap-1 mt-3">
           <button
             onClick={() => setActiveTab("assistant")}
-            className={`py-1 rounded font-medium transition-colors ${
+            className={`flex-1 py-1.5 px-2 rounded text-[11px] font-medium transition-colors text-center whitespace-nowrap ${
               activeTab === "assistant" ? "bg-amber-600 text-white shadow" : "text-gray-400 hover:text-white"
             }`}
           >
@@ -65,7 +65,7 @@ export const EvidenceAssistant: React.FC<EvidenceAssistantProps> = ({
           </button>
           <button
             onClick={() => setActiveTab("provenance")}
-            className={`py-1 rounded font-medium transition-colors ${
+            className={`flex-1 py-1.5 px-2 rounded text-[11px] font-medium transition-colors text-center whitespace-nowrap ${
               activeTab === "provenance" ? "bg-amber-600 text-white shadow" : "text-gray-400 hover:text-white"
             }`}
           >
@@ -73,11 +73,11 @@ export const EvidenceAssistant: React.FC<EvidenceAssistantProps> = ({
           </button>
           <button
             onClick={() => setActiveTab("related")}
-            className={`py-1 rounded font-medium transition-colors ${
+            className={`flex-1 py-1.5 px-2 rounded text-[11px] font-medium transition-colors text-center whitespace-nowrap ${
               activeTab === "related" ? "bg-amber-600 text-white shadow" : "text-gray-400 hover:text-white"
             }`}
           >
-            Related ({related.length})
+            Related
           </button>
         </div>
       </div>

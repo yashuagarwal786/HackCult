@@ -17,9 +17,9 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenMap,
 }) => {
   return (
-    <header className="h-16 border-b border-gray-800 bg-[#0e1422]/90 backdrop-blur-md px-6 flex items-center justify-between gap-4 z-20 shrink-0">
+    <header className="h-16 border-b border-gray-800 bg-[#0e1422]/95 backdrop-blur-md px-5 flex items-center justify-between gap-4 z-20 shrink-0">
       {/* Global Search Bar with Multilingual prompt */}
-      <div className="flex-1 max-w-xl relative">
+      <div className="flex-1 max-w-xl min-w-[180px] relative">
         <Search className="w-4 h-4 absolute left-3 top-3 text-gray-400" />
         <input
           type="text"
@@ -31,10 +31,10 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Action shortcuts */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2.5 shrink-0">
         <button
           onClick={onOpen3D}
-          className="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-amber-300 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors border border-amber-500/20 shadow-sm"
+          className="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-amber-300 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors border border-amber-500/20 shadow-sm whitespace-nowrap shrink-0"
         >
           <Box className="w-3.5 h-3.5 text-amber-400" />
           <span>3D Studio</span>
@@ -42,7 +42,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         <button
           onClick={onOpenMap}
-          className="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-cyan-300 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors border border-cyan-500/20 shadow-sm"
+          className="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-cyan-300 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-colors border border-cyan-500/20 shadow-sm whitespace-nowrap shrink-0"
         >
           <Compass className="w-3.5 h-3.5 text-cyan-400" />
           <span>Explorer Map</span>
@@ -50,10 +50,10 @@ export const Header: React.FC<HeaderProps> = ({
 
         <button
           onClick={onNewNote}
-          className="px-3.5 py-1.5 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-lg"
+          className="px-3.5 py-1.5 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-lg whitespace-nowrap shrink-0"
         >
           <PlusCircle className="w-3.5 h-3.5" />
-          <span>New Archival Note</span>
+          <span>New Note</span>
         </button>
       </div>
     </header>
